@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 *,
 *::after,
 *::before {
@@ -10,6 +11,8 @@ body {
   font-family: "Josefin Sans";
   font-style: normal;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .maincontainer {
@@ -29,11 +32,13 @@ body {
   letter-spacing: 1rem;
   font-weight: 600;
   color: hsl(0, 6%, 24%);
+  font-weight: 600;
 }
 
 .paragraph {
-  color: hsl(0, 36%, 70%);
+  color: hsla(0, 36%, 70%, 0.6);
   font-size: 16px;
+  font-weight: 600;
 }
 
 .bacs {
@@ -43,7 +48,8 @@ body {
 }
 
 .container1 {
-  background-color: hsl(0, 100%, 98%);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   width: 63%;
   padding: 75px 150px;
 }
@@ -58,26 +64,53 @@ body {
   gap: 1.5rem;
 }
 
-select {
-  background-color: hsl(0, 36%, 70%);
-  color: white;
-  border: transparent;
-  border-radius: 16px;
-  height: 35px;
-  width: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+.pandinput {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.form-group input {
+button {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  color: white;
+  border: 1px solid hsl(0, 100%, 98%);
+  border-radius: 20px;
+  width: 30%;
+  height: 37px;
+  display: flex;
+  border: none;
+}
+
+button svg {
+  color: inherit;
+}
+
+.input-wrapper {
+  justify-content: space-between;
   border: 1px solid hsl(0, 36%, 70%);
   color: hsl(0, 36%, 70%);
-  background-color: hsl(0, 0%, 100%);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   border-radius: 20px;
-  height: 35px;
-  width: 20rem;
+  height: 37px;
+  width: 100%;
   background-color: hsl(0, 0%, 100%);
   padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  border: none;
+  width: 100%;
+  outline: none;
+  height: 100%;
+}
+.input-wrapper input:focus,
+.input-wrapper input:hover {
+  outline: none;
+  border: none;
 }
 
 ::placeholder {
@@ -87,5 +120,10 @@ select {
 @media (min-width: 375px) and (max-width: 800px) {
   .maincontainer {
     flex-direction: column-reverse;
+  }
+
+  .container1 {
+    background-color: hsl(0, 100%, 98%);
+    width: 63%;
   }
 }
