@@ -51,7 +51,7 @@ body {
 
 .container1 {
   width: 63%;
-  padding: 50px 110px 0 30px;
+  padding: 75px 150px 0 150px;
 }
 
 .container2 {
@@ -124,7 +124,7 @@ button svg {
 @media (min-width: 375px) and (max-width: 800px) {
   .maincontainer {
     flex-direction: column-reverse;
-    width: 100;
+    width: 100%;
   }
 
   .container1 {
@@ -142,6 +142,7 @@ button svg {
 
   .img2 {
     display: block;
+    padding: 30px 50px;
   }
 
   .img1 {
